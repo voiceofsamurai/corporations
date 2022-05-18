@@ -163,7 +163,7 @@ main {
 }
 
 .item {
-	--base: 7vh;
+	--base: 20vh;
 	--interval: 9vh;
 	padding: 1rem;
 	margin: 1rem 0;
@@ -177,7 +177,6 @@ main {
 .item__img {
 	background-color: black;
 	width: 100%;
-	border-radius: 4px;
 	will-change: transform;
 }
 .item__caption{
@@ -253,50 +252,54 @@ main {
 }
 
 .article__img-wrap {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    grid-area: img;
-    transform-origin: 50% 100%;
-    margin-bottom: 1rem;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	grid-area: img;
+	transform-origin: 50% 100%;
+	margin-bottom: 1rem;
 	border-radius: 17px 17px 0 0;
 }
 
 .article__img {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 50% 35%;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 35%;
 }
 
 .article__number {
+	color: #00f0ff;
 	grid-area: number;
 	font-weight: bold;
 }
 
 .article__title {
+	user-select: none;
+	font-family: 'Sen', serif;
 	grid-area: title;
 	line-height: 0.85;
 	font-size: 8vw;
-	text-transform: uppercase;
 	font-weight: bold;
-	font-family: quiche-sans, sans-serif;
 	color: var(--color-type);
 	position: relative;
 	margin: 1rem 0 0.5rem;
-	pointer: default;
+	/* pointer: default; */
 }
 
 .article__intro {
+	font-family: 'Sen', serif;
 	grid-area: intro;
 	font-weight: bold;
 	padding-right: 2rem;
 }
 
 .article__description {
+	font-family: 'Sen', serif;
 	grid-area: desc;
 	overflow: hidden;
 	padding-right: 2rem;
+	grid-column-end: 4; 
 }
 
 .back {
@@ -397,16 +400,16 @@ main {
 
 	.back {
 		position: absolute;
-		left: calc(((100vw - (38vw + 280px)) / 2) + 1.5rem);
+		left: calc(((100vw - (45vw + 280px)) / 2) + 1.5rem);
 	}
 	.article-wrap {
-		top: 20vh;
-		height: 80vh;
+		top: 2vh;
+		height: 98vh;
 		padding: 0;
 	}
 	.article {
 		height: 100%;
-		width: calc(38vw + 280px);
+		width: calc(45vw + 280px);
 		margin: 0 auto;
 		grid-template-rows: 10vw 2rem 12vw auto auto;
 		grid-template-columns: 1.5rem 30% 1fr 1.5rem;
@@ -425,11 +428,17 @@ main {
 	}
 	.article__img-wrap {
 		align-self: end;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-    .article__img {
-    	background-position: 50% 50%;
-    }
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	.article__img {
+		transition: opacity .6s;
+		opacity: 0.4;
+		background-position: 50% 50%;
+	}
+
+	.article__img-wrap:hover .article__img{
+		opacity: 1;
+	}
 }

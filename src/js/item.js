@@ -27,7 +27,7 @@ export class Item {
       gsap.timeline({ defaults: hoverTimelineDefaults })
         .to([this.DOM.image, this.DOM.title, this.DOM.description], {
           y: pos => pos * 8 - 4
-        });
+        })
     });
     this.DOM.el.addEventListener('mouseleave', () => {
       gsap.timeline({ defaults: hoverTimelineDefaults })

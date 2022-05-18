@@ -14,7 +14,7 @@ export class TypeTransition {
       .to(this.DOM.el, {
         duration: 1.4,
         ease: 'power2.inOut',
-        scale: 2.7,
+        scale: 2.5,
         rotate: -90
       })
       .to(this.DOM.lines, {
