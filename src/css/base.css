@@ -163,7 +163,7 @@ main {
 }
 
 .item {
-	--base: 20vh;
+	--base: 16vh;
 	--interval: 9vh;
 	padding: 1rem;
 	margin: 1rem 0;
