@@ -7,11 +7,9 @@ import gsap from 'gsap/gsap-core'
 preloadImages('.item__img, .article__img').then(() => document.body.classList.remove('loading'))
 
 const typeT = new TypeTransition(document.querySelector('[data-type-transition]'))
-
-let isAnimating = false
-
 const frameEl = document.querySelector('.frame')
 
+let isAnimating = false
 let itemsInstanceArr = []
 let currentItem = -1
 const itemsWrap = document.querySelector('.item-wrap')
@@ -192,4 +190,6 @@ const closeItem = () => {
     )
 }
 
-backCtrl.addEventListener('click', () => closeItem())
+backCtrl.addEventListener('click', () => {
+  closeItem()
+}, false)
