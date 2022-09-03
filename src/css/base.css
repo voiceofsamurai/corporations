@@ -31,7 +31,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Page Loader */
 .js .loading::before,
 .js .loading::after {
   content: "";
@@ -83,7 +82,6 @@ a.link-alt {
   color: var(--color-link-alt);
 }
 
-/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
 a:focus {
   /* Provide a fallback style for browsers
 	 that don't support :focus-visible */
